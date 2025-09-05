@@ -1,0 +1,28 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Global section styling */
+section {
+  padding: 4rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}

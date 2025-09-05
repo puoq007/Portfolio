@@ -1,0 +1,99 @@
+/* src/components/css/Activity_page.css */
+.activity-page-container {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.activity-hero-section {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 1rem; 
+}
+
+.activity-hero-section h1 {
+  font-size: 3.5rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.activity-hero-section  h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #444;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.activity-hero-section  p {
+  font-size: 1.15rem;
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  line-height: 1.6;
+  color: #444;
+}
+
+.activity-section {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.activity-section-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.activity-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.activity-section ul {
+  list-style: disc;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.activity-section ul li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .activity-page-container {
+    padding: 60px 15px;
+  }
+  .activity-hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .activity-section-title {
+    font-size: 1.7rem;
+  }
+  .activity-section p,
+  .activity-section ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-hero-section h1 {
+    font-size: 2rem;
+  }
+  .activity-section-title {
+    font-size: 1.5rem;
+  }
+}

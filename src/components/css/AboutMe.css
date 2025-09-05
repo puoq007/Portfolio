@@ -1,0 +1,141 @@
+/* src/components/css/AboutMe.css */
+
+.AboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto 1rem auto;
+  flex-wrap: wrap;
+}
+
+.AboutMe-content {
+  flex: 1 1 500px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.AboutMe-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.AboutMe-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.home-page-container section {
+  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.home-page-container section:last-child {
+  margin-bottom: 0;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.learn-more-btn,
+.contact-btn,
+.download-btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent; 
+  border: 2px solid #007bff; 
+  color: #007bff;
+}
+
+
+.learn-more-btn:hover,
+.contact-btn:hover,
+.download-btn:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.AboutMe-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AboutMe-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 769px) {
+  .AboutMe {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .AboutMe-content {
+    text-align: left;
+  }
+
+  .buttons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .AboutMe {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+
+  .AboutMe-content {
+    order: 2;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .AboutMe-image {
+    order: 1;
+    margin-bottom: 2rem;
+    max-width: 80%;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .learn-more-btn,
+  .contact-btn,
+  .download-btn {
+    width: 100%;
+  }
+
+  .AboutMe-content h1 {
+    font-size: 2rem;
+  }
+}
