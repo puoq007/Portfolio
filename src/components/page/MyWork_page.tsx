@@ -7,7 +7,7 @@ import image2 from '../../assets/img/Data_communication_to_network.png';
 import image3 from '../../assets/img/web_app.png';
 import image4 from '../../assets/img/Embedded_System.png';
 import image5 from '../../assets/img/Artificial_Intelligence_Applications.png';
-import image6 from '../../assets/img/mobile_app.png';
+import image6 from '../../assets/img/Mobile_app.png';
 import image7 from '../../assets/img/Database.png';
 import image8 from '../../assets/img/Fundamental_of_Electrical_Engineering.png';
 import image9 from '../../assets/img/Service_Provider_Network.png';
