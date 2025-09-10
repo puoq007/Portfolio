@@ -5,15 +5,15 @@ import vscodeLogo from '../assets/vscode.svg';
 
 // Font Awesome
 import {
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython,
-  FaGitAlt, FaDocker, FaDatabase, FaAws, FaPhp, FaJava,
-  FaGithub, FaNpm, FaLinux, FaTerminal, FaAndroid, FaBootstrap
+  FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaPython,
+  FaGitAlt, FaDocker, FaDatabase,
+  FaGithub, FaLinux, FaAndroid,
 } from 'react-icons/fa';
 
 // Simple Icons
 import {
   SiFlutter, SiFirebase, SiMongodb, SiGooglecloud,
-  SiPostman, SiFigma, SiUbuntu, SiTypescript,
+  SiUbuntu,
   SiDart, SiXcode
 } from 'react-icons/si';
 
@@ -25,15 +25,10 @@ function Tools() {
     { icon: FaHtml5, key: 'html5', color: '#E34F26' },
     { icon: FaCss3Alt, key: 'css3', color: '#1572B6' },
     { icon: FaJs, key: 'javascript', color: '#F7DF1E' },
-    { icon: SiTypescript, key: 'typescript', color: '#3178C6' },
-    { icon: FaReact, key: 'react', color: '#61DAFB' },
-    { icon: FaBootstrap, key: 'bootstrap', color: '#7952B3' },
 
     // Backend
     { icon: FaNodeJs, key: 'nodejs', color: '#339933' },
     { icon: FaPython, key: 'python', color: '#3776AB' },
-    { icon: FaPhp, key: 'php', color: '#777BB4' },
-    { icon: FaJava, key: 'java', color: '#007396' },
 
     // Mobile
     { icon: SiFlutter, key: 'flutter', color: '#02569B' },
@@ -63,15 +58,10 @@ function Tools() {
     { icon: FaGitAlt, key: 'git', color: '#F05032' },
     { icon: FaGithub, key: 'github', color: '#181717' },
     { icon: FaDocker, key: 'docker', color: '#2496ED' },
-    { icon: FaNpm, key: 'npm', color: '#CB3837' },
     { icon: FaLinux, key: 'linux', color: '#FCC624' },
-    { icon: FaTerminal, key: 'terminal', color: '#000000' },
-    { icon: FaAws, key: 'aws', color: '#FF9900' },
 
     // Cloud & Tools
     { icon: SiGooglecloud, key: 'gcp', color: '#4285F4' },
-    { icon: SiPostman, key: 'postman', color: '#FF6C37' },
-    { icon: SiFigma, key: 'figma', color: '#F24E1E' },
     { icon: SiUbuntu, key: 'ubuntu', color: '#E95420' },
   ];
 
