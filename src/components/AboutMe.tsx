@@ -1,6 +1,6 @@
 // components/AboutMe.tsx
 import './css/AboutMe.css';
-// import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 import { useTranslation } from 'react-i18next';
 
 import profileImage from '../assets/img/profile.jpg';
@@ -36,10 +36,10 @@ const AboutMe = () => {
                         className="download-btn"
                     >
                         {t('about_me.download_resume_button')}
-                    </a>
+                    </a> */}
                     <Link to="/contact" className="contact-btn">
                         {t('about_me.contact_button')}
-                    </Link> */}
+                    </Link>
                 </div>
             </div>
             <div className="AboutMe-image">
