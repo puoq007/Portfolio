@@ -16,7 +16,7 @@ const MyWorksPreview = () => {
       description: t('my_works_page.project11_description'),
       image: image11,
       link: '#/project/jig-ims',
-      category: t('my_works_page.featured_label'),
+      category: 'Featured Project',
     },
     {
       id: 10,
@@ -24,27 +24,27 @@ const MyWorksPreview = () => {
       description: t('my_works_page.project10_description'),
       image: image10,
       link: '#/project/10',
-      category: t('my_works_page.featured_label'),
+      category: 'Featured Project',
     }
   ];
 
   return (
     <section className="featured-projects-editorial">
       <div className="editorial-header fade-up">
-        <h2 className="section-heading" dangerouslySetInnerHTML={{ __html: t('homepage.featured_projects_title') }} />
-        <p className="section-subtext">{t('homepage.featured_projects_subtitle')}</p>
+        <h2 className="section-heading">Featured <br /> <span className="highlight-text">Projects</span></h2>
+        <p className="section-subtext">Selected works that showcase my ability to build end-to-end solutions.</p>
       </div>
-      
+
       <div className="projects-container">
         {featuredProjects.map((project, index) => {
           const isEven = index % 2 === 0;
           return (
             <div className={`project-row ${isEven ? 'row-normal' : 'row-reverse'} fade-up`} key={project.id} style={{ animationDelay: '0.2s' }}>
-              
+
               <div className="project-image-wrapper">
                 <img src={project.image} alt={project.title} className="project-img" />
               </div>
-              
+
               <div className="project-info-card">
                 <span className="project-eyebrow">{project.category}</span>
                 <h3 className="project-title">{project.title}</h3>
@@ -57,7 +57,7 @@ const MyWorksPreview = () => {
                   </a>
                 </div>
               </div>
-              
+
             </div>
           );
         })}
@@ -65,7 +65,7 @@ const MyWorksPreview = () => {
 
       <div className="view-all-container fade-up" style={{ animationDelay: '0.4s' }}>
         <Link to="/mywork_page" className="view-all-btn">
-          {t('homepage.view_all_projects')}
+          View All Projects
         </Link>
       </div>
     </section>

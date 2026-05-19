@@ -125,7 +125,7 @@ function MyWorks_page() {
       descriptionKey: 'my_works_page.project11_description',
       detailsKey: 'my_works_page.project11_details',
       image: image11,
-      link: '/project/11',
+      link: '/project/jig-ims',
       category: 'Full-Stack',
       tags: ['Blazor', '.NET', 'C#', 'SQL Server', 'Docker', 'QR Code', 'REST API'],
       isFeatured: true,
