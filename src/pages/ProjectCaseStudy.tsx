@@ -271,6 +271,9 @@ const ProjectCaseStudy = () => {
   const localizedTitle = t(`my_works_page.project${project.id}_title`, project.title);
   const localizedCategory = t(`my_works_page.project${project.id}_description`, project.category);
   const localizedIntro = t(`my_works_page.project${project.id}_details`, project.intro);
+  const localizedCourse = t(`my_works_page.project${project.id}_course`, project.course);
+  const localizedChallenge = t(`my_works_page.project${project.id}_challenge`, project.challenge);
+  const localizedOutcome = t(`my_works_page.project${project.id}_outcome`, project.outcome);
 
   return (
     <div className="cs-container">
@@ -281,7 +284,7 @@ const ProjectCaseStudy = () => {
           <span className="cs-id-badge">#{String(project.id).padStart(2, '0')}</span>
         </div>
         <h1>{localizedTitle}</h1>
-        <p className="cs-course">📚 {project.course}</p>
+        <p className="cs-course">📚 {localizedCourse}</p>
         <p className="cs-intro">{localizedIntro}</p>
         <div className="cs-tags">
           {project.tags.map((tag) => (
@@ -293,7 +296,7 @@ const ProjectCaseStudy = () => {
       {/* Challenge */}
       <section className="cs-section fade-up" style={{ animationDelay: '0.2s' }}>
         <h2 className="cs-section-title">{t('case_study.challenge_title')}</h2>
-        <p>{project.challenge}</p>
+        <p>{localizedChallenge}</p>
       </section>
 
       {/* Architecture */}
@@ -304,8 +307,8 @@ const ProjectCaseStudy = () => {
             <React.Fragment key={node.title}>
               <div className="cs-arch-box">
                 <span className="cs-arch-icon">{node.icon}</span>
-                <h3>{node.title}</h3>
-                <p>{node.tech}</p>
+                <h3>{t(`my_works_page.project${project.id}_arch_${i}_title`, node.title)}</h3>
+                <p>{t(`my_works_page.project${project.id}_arch_${i}_tech`, node.tech)}</p>
               </div>
               {i < project.architecture.length - 1 && (
                 <div className="cs-arch-arrow">→</div>
@@ -319,11 +322,11 @@ const ProjectCaseStudy = () => {
       <section className="cs-section fade-up" style={{ animationDelay: '0.4s' }}>
         <h2 className="cs-section-title">{t('case_study.features_title')}</h2>
         <div className="cs-features-grid">
-          {project.features.map((f) => (
+          {project.features.map((f, i) => (
             <div key={f.title} className="cs-feature-card">
               <span className="cs-feature-icon">{f.icon}</span>
-              <h4>{f.title}</h4>
-              <p>{f.desc}</p>
+              <h4>{t(`my_works_page.project${project.id}_feat_${i}_title`, f.title)}</h4>
+              <p>{t(`my_works_page.project${project.id}_feat_${i}_desc`, f.desc)}</p>
             </div>
           ))}
         </div>
@@ -332,7 +335,7 @@ const ProjectCaseStudy = () => {
       {/* Outcome */}
       <section className="cs-section fade-up" style={{ animationDelay: '0.5s' }}>
         <h2 className="cs-section-title">{t('case_study.outcome_title')}</h2>
-        <p>{project.outcome}</p>
+        <p>{localizedOutcome}</p>
       </section>
 
       {/* Footer */}
