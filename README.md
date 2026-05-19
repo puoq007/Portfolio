@@ -67,26 +67,32 @@
 
 
 ### โครงสร้างไฟล์ (Project Structure)
-    PROFILE_KANJANAROJ/
-    ├── public/                 # ไฟล์ static assets (รูปภาพ, PDF) ที่เข้าถึงได้โดยตรง
-    │   ├── documents/          # ไฟล์ PDF เช่น CV, Resume
-    │   └── images/             # รูปโปรไฟล์, รูปภาพสำหรับ Project/Certificates
-    ├── src/
-    │   ├── assets/             # รูปภาพ (ถ้า import ผ่าน JS/TS), fonts, etc.
-    │   │   ├── Documents/      # เอกสารต่างๆ ที่ import โดยตรง (ถ้าเลือกใช้วิธีนี้)
-    │   │   └── img/            # รูปภาพที่ import โดยตรง (ถ้าเลือกใช้วิธีนี้)
-    │   ├── components/         # คอมโพเนนต์หลักของแต่ละหน้า (AboutMe, Certificates, etc.)
-    │   │   ├── css/            # ไฟล์ CSS เฉพาะของคอมโพเนนต์
-    │   │   └── page/           # คอมโพเนนต์ของแต่ละหน้าหลัก (ถ้าแยก)
-    │   ├── i18n/               # ไฟล์สำหรับ Internationalization (ภาษา)
-    │   ├── Page_css/           # ไฟล์ CSS สำหรับหน้าเพจหลัก
-    │   ├── App.tsx             # คอมโพเนนต์หลักของแอปพลิเคชัน
-    │   ├── main.tsx            # จุดเริ่มต้นของแอปพลิเคชัน
-    │   └── vite-env.d.ts
-    ├── .gitignore              # ไฟล์ที่ Git จะไม่ติดตาม
-    ├── index.html              # ไฟล์ HTML หลัก
-    ├── package.json            # รายละเอียดโปรเจกต์และ dependencies
-    ├── tsconfig.json           # การตั้งค่า TypeScript
-    ├── tsconfig.node.json
-    ├── vite.config.ts          # การตั้งค่า Vite
-    └── README.md               # เอกสารโปรเจกต์# Portfolio# Portfolio
+```text
+Portfolio/
+├── public/                 # ไฟล์ static assets ที่เข้าถึงได้โดยตรง (PDF, ฯลฯ)
+│   └── documents/          # ไฟล์ Resume และเอกสาร PDF
+├── src/
+│   ├── assets/             # รูปภาพและสไตล์ชีตระดับโลกที่นำเข้าโดยตรง
+│   │   └── img/            # รูปโปรไฟล์ ภาพประกอบผลงาน และเกียรติบัตร
+│   ├── components/         # คอมโพเนนต์แยกย่อยสำหรับส่วนประกอบของระบบ
+│   │   ├── layout/         # ส่วนโครงร่าง เช่น Navbar ของระบบ
+│   │   └── sections/       # ส่วนย่อยของหน้าแรก (AboutMe, Tools, Contact, GitHub)
+│   ├── locales/            # ไฟล์พจนานุกรมแปลภาษาสำหรับ i18next
+│   │   ├── en/             # คีย์แปลภาษาอังกฤษ (translation.json)
+│   │   └── th/             # คีย์แปลภาษาไทย (translation.json)
+│   ├── pages/              # คอมโพเนนต์หน้าเว็บหลักและสไตล์ชีตเฉพาะหน้า
+│   │   ├── Home.tsx        # หน้าแรกของเว็บไซต์ (Landing Page)
+│   │   ├── SkillsPage.tsx  # หน้ารวบรวมทักษะความสามารถทั้งหมด
+│   │   ├── CertificatesPage.tsx # หน้ารวบรวมเกียรติบัตรและใบประกาศนียบัตร
+│   │   ├── ActivityPage.tsx # หน้ารวบรวมกิจกรรมภายนอกหลักสูตร
+│   │   ├── MyWorkPage.tsx  # หน้ารวบรวมผลงานและกล่องค้นหาพร้อมฟิลเตอร์
+│   │   ├── JigImsCaseStudy.tsx # หน้าศึกษาผลงานพิเศษ Jig IMS แบบละเอียด
+│   │   └── ProjectCaseStudy.tsx # หน้าศึกษาผลงานทั่วไปแบบไดนามิก (Template)
+│   ├── App.tsx             # คอมโพเนนต์จัดเส้นทางหลัก (React Router DOM Setup)
+│   ├── i18n.js             # ไฟล์กำหนดค่าเริ่มต้น i18next Engine
+│   └── main.tsx            # จุดเริ่มต้นระดับรากของแอปพลิเคชัน
+├── package.json            # รายการ Dependencies และ Scripts ของโปรเจกต์
+├── tsconfig.json           # ค่าคอนฟิกของ TypeScript Compiler
+├── vite.config.ts          # ค่าคอนฟิกการแปลงและคอมไพล์ของ Vite
+└── README.md               # เอกสารคำชี้แจงโปรเจกต์เล่มนี้
+```
