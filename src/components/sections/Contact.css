@@ -1,0 +1,70 @@
+/* ════════════════════════════════════════════
+   MINIMAL FOOTER
+   ════════════════════════════════════════════ */
+
+.minimal-footer {
+  max-width: 1000px;
+  margin: 6rem auto 2rem;
+  padding: 0 1.5rem;
+  border-top: 1px solid rgba(139, 92, 246, 0.1);
+  padding-top: 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  max-width: 500px;
+  text-align: left;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.footer-email {
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  transition: color 0.3s;
+}
+
+.footer-email:hover {
+  color: var(--primary-light);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-socials a {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--primary-light);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .minimal-footer {
+    margin-top: 4rem;
+    padding-top: 3rem;
+  }
+}

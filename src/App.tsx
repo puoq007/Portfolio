@@ -4,14 +4,16 @@ import { Suspense, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import './i18n';
 
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Tools from './components/Tools';
-import Contact from './components/Contact';
-import Activity_page from './components/page/Activity_page';
-import MyWork_page from './components/page/MyWork_page';
-import Skills_page from './components/page/Skills_page';
-import Certificates_page from './components/page/Certificates_page';
+import Navbar from './components/layout/Navbar';
+import Home from './pages/Home';
+import Tools from './components/sections/Tools';
+import Contact from './components/sections/Contact';
+import Activity_page from './pages/ActivityPage';
+import MyWork_page from './pages/MyWorkPage';
+import Skills_page from './pages/SkillsPage';
+import Certificates_page from './pages/CertificatesPage';
+import JigImsCaseStudy from './pages/JigImsCaseStudy';
+import ProjectCaseStudy from './pages/ProjectCaseStudy';
 
 import './App.css';
 
@@ -38,6 +40,8 @@ const App = () => {
           <Route path="/activity_page" element={<Activity_page />} />
           <Route path="/skills" element={<Skills_page />} />
           <Route path="/certificates_page" element={<Certificates_page />} />
+          <Route path="/project/jig-ims" element={<JigImsCaseStudy />} />
+          <Route path="/project/:id" element={<ProjectCaseStudy />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={
             <div style={{ padding: '50px', textAlign: 'center' }}>

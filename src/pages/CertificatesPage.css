@@ -1,0 +1,120 @@
+/* ════════════════════════════════════════════
+   CERTIFICATES SUBPAGE
+   ════════════════════════════════════════════ */
+
+.certificates-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+  animation: fadeUp 0.6s ease both;
+}
+
+/* ── Header ── */
+.certificates-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.certificates-title {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 900;
+  color: var(--text-base);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.certificates-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ── Grid ── */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+/* ── Card ── */
+.certificate-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── Image ── */
+.certificate-image-link-wrapper {
+  width: 100%;
+  display: block;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.certificate-card:hover .certificate-image {
+  transform: scale(1.06);
+}
+
+/* ── Info ── */
+.certificate-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.certificate-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-base);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.certificate-issuer {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.certificate-date {
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  font-weight: 500;
+  margin-top: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .certificates-container {
+    padding: 3rem 1.25rem;
+  }
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .certificate-info {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,9 @@
+.home-page-container section {
+  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.home-page-container section:last-child {
+  margin-bottom: 0;
+}

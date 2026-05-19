@@ -1,0 +1,206 @@
+/* ════════════════════════════════════════════
+   FEATURED PROJECTS (EDITORIAL LAYOUT)
+   ════════════════════════════════════════════ */
+
+.featured-projects-editorial {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.editorial-header {
+  margin-bottom: 6rem;
+  max-width: 600px;
+}
+
+.editorial-header .section-heading {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+}
+
+.editorial-header .highlight-text {
+  color: var(--primary-light);
+}
+
+.editorial-header .section-subtext {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.featured-projects-editorial .project-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.featured-projects-editorial .project-row.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* ── Image Side ── */
+.featured-projects-editorial .project-image-wrapper {
+  flex: 0 0 65%;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s;
+  height: auto;
+}
+
+.featured-projects-editorial .project-image-wrapper:hover {
+  transform: translateY(-10px);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.85) contrast(1.1);
+  transition: filter 0.5s;
+}
+
+.featured-projects-editorial .project-image-wrapper:hover .project-img {
+  filter: brightness(1) contrast(1);
+}
+
+/* ── Text Side (Overlapping Card) ── */
+.featured-projects-editorial .project-info-card {
+  flex: 0 0 45%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-projects-editorial .row-normal .project-info-card {
+  align-items: flex-end;
+  text-align: right;
+  margin-left: -10%;
+}
+
+.featured-projects-editorial .row-reverse .project-info-card {
+  align-items: flex-start;
+  text-align: left;
+  margin-right: -10%;
+}
+
+.project-eyebrow {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.featured-projects-editorial .project-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+  line-height: 1.4;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  overflow: visible;
+}
+
+.featured-projects-editorial .project-desc-box {
+  background: rgba(19, 8, 42, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(20px);
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon-link {
+  color: var(--text-base);
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.icon-link:hover {
+  color: var(--primary-light);
+  transform: translateY(-3px);
+}
+
+/* ── View All Button ── */
+.view-all-container {
+  margin-top: 6rem;
+  text-align: left;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  background: var(--bg-card);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.view-all-btn:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-light);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* ── Responsive ── */
+@media (max-width: 968px) {
+  .featured-projects-editorial .project-row, 
+  .featured-projects-editorial .project-row.row-reverse {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .featured-projects-editorial .project-image-wrapper {
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-projects-editorial .project-info-card {
+    flex: 1 1 100%;
+    margin: 0 !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .featured-projects-editorial .project-desc-box {
+    padding: 1.5rem;
+    background: var(--bg-card);
+  }
+}

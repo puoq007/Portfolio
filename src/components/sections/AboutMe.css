@@ -1,0 +1,190 @@
+/* ════════════════════════════════════════════
+   ABOUT ME SECTION (EXACT CENTERED LAYOUT)
+   ════════════════════════════════════════════ */
+
+.AboutMe-section-bg {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.AboutMe-exact {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* ── Top Block: Avatar & Quote ── */
+.hero-top-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.hero-avatar-wrapper {
+  position: relative;
+}
+
+.hello-arrow-text {
+  position: absolute;
+  bottom: 100%;
+  left: 60%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  color: var(--text-base);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.hello-arrow-text .highlight-text {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+.arrow-svg {
+  margin-top: 5px;
+  margin-left: -20px;
+  transform: scaleX(-1);
+}
+
+.avatar-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(139, 92, 246, 0.5); /* Strong purple glow behind avatar */
+  position: relative;
+  z-index: 2;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Quote Block */
+.hero-quote-block {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-width: 320px;
+  min-height: 120px;
+}
+
+.quote-eyebrow {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.quote-main {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  min-height: 2.4em; /* Lock for 2 lines */
+}
+
+.quote-highlight {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--primary-light);
+  font-style: italic;
+  position: relative;
+}
+
+.quote-highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--primary-light);
+  border-radius: 50%;
+  transform: scale(1.2, 0.6) rotate(-5deg);
+  pointer-events: none;
+}
+
+.quote-subtext {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  margin-top: 0.5rem;
+}
+
+/* ── Bottom Block: Main Typography ── */
+.hero-bottom-block {
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 250px;
+}
+
+.main-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.main-subtitle {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-base);
+}
+
+.main-description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero-top-block {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-quote-block {
+    text-align: center;
+  }
+  
+  .hello-arrow-text {
+    right: 50%;
+    transform: translateX(50%);
+    top: -30px;
+  }
+  
+  .arrow-svg {
+    display: none;
+  }
+  
+  .hero-bottom-block {
+    text-align: left;
+  }
+}
