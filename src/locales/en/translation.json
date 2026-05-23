@@ -268,6 +268,8 @@
   },
   "homepage": {
     "featured_projects_title": "Featured <br/> <span class=\"highlight-text\">Projects</span>",
+    "featured_title_line1": "Featured",
+    "featured_title_line2": "Projects",
     "featured_projects_subtitle": "Selected works that showcase my ability to build end-to-end solutions.",
     "view_all_projects": "View All Projects",
     "activities_title": "University Activities",
@@ -297,5 +299,18 @@
     "feature3_title": "Real-time Audit",
     "feature3_desc": "Instant inventory reports and history logs for quality compliance.",
     "outcome_text": "The JIG IMS significantly reduced administrative overhead by 70% and virtually eliminated 'lost' jig incidents. The system provides a clear ROI through improved production uptime and better resource allocation."
+  },
+  "timeline": {
+    "title_line1": "My",
+    "title_line2": "Journey",
+    "subtitle": "A timeline of my education and professional experience.",
+    "exp1_title": "Software Engineer Intern",
+    "exp1_subtitle": "Jig IMS Project",
+    "exp1_date": "Jan 2024 - Apr 2024",
+    "exp1_desc": "Developed a full-stack tool management system for factory use using Blazor WebAssembly and .NET 8, reducing paperwork by 70%.",
+    "edu1_title": "B.Eng. in Computer Engineering",
+    "edu1_subtitle": "Mae Fah Luang University",
+    "edu1_date": "2020 - 2024",
+    "edu1_desc": "Graduated with a focus on software engineering, network architectures, and IoT systems."
   }
 }

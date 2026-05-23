@@ -9,28 +9,28 @@ const ActivityPreview = () => {
     {
       id: 1,
       title: t('activity_page.section1_title'),
-      description: t('activity_page.section1_description').substring(0, 70) + '...',
+      description: t('activity_page.section1_description'),
       icon: <FaGraduationCap />,
       link: '/activity_page'
     },
     {
       id: 2,
       title: t('activity_page.section2_title'),
-      description: t('activity_page.section2_description').substring(0, 70) + '...',
+      description: t('activity_page.section2_description'),
       icon: <FaFlagCheckered />,
       link: '/activity_page'
     },
     {
       id: 3,
       title: t('activity_page.section3_title'),
-      description: t('activity_page.section3_description').substring(0, 70) + '...',
+      description: t('activity_page.section3_description'),
       icon: <FaTree />,
       link: '/activity_page'
     },
     {
       id: 4,
       title: t('activity_page.section4_title'),
-      description: t('activity_page.section4_description').substring(0, 70) + '...',
+      description: t('activity_page.section4_description'),
       icon: <FaUsers />,
       link: '/activity_page'
     }

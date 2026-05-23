@@ -6,7 +6,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="minimal-footer">
+    <footer id="contact" className="minimal-footer">
       <div className="footer-content">
         <h2 className="footer-title">{t('contact_page.footer_title')}</h2>
         <p className="footer-description">

@@ -1,4 +1,4 @@
-// src/components/Certificates.tsx
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './CertificatesPage.css'; 
 
@@ -16,6 +16,7 @@ import cestificateImage11 from '../assets/img/Speexx_EN_B1_2.png';
 
 const Certificates = () => {
     const { t } = useTranslation();
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const certificates = [
         { id: 1, titleKey: 'certificates_page.cert1_title', issuerKey: 'certificates_page.cert1_issuer', dateKey: 'certificates_page.cert1_date', image: certificateImage1, fullImage: certificateImage1 },
@@ -32,40 +33,52 @@ const Certificates = () => {
     ];
 
     return (
-        <div className="certificates-container">
-            <div className="certificates-header">
-                <div className="eyebrow fade-up" style={{ animationDelay: '0.1s' }}>{t('certificates_page.eyebrow')}</div>
-                <h1 className="certificates-title fade-up" style={{ animationDelay: '0.2s' }}>{t('certificates_page.main_title')}</h1>
-                <p className="certificates-description fade-up" style={{ animationDelay: '0.3s' }}>{t('certificates_page.description')}</p>
+        <>
+            <div className="certificates-container">
+                <div className="certificates-header">
+                    <div className="eyebrow fade-up" style={{ animationDelay: '0.1s' }}>{t('certificates_page.eyebrow')}</div>
+                    <h1 className="certificates-title fade-up" style={{ animationDelay: '0.2s' }}>{t('certificates_page.main_title')}</h1>
+                    <p className="certificates-description fade-up" style={{ animationDelay: '0.3s' }}>{t('certificates_page.description')}</p>
+                </div>
+
+                <div className="certificates-grid">
+                    {certificates.map((cert, index) => (
+                        <div className="certificate-card fade-up" key={cert.id} style={{ animationDelay: `${0.2 + index * 0.05}s` }}>
+                            {cert.image && (
+                                <div
+                                    onClick={() => setSelectedImage(cert.fullImage)}
+                                    className="certificate-image-link-wrapper"
+                                    role="button"
+                                    tabIndex={0}
+                                    onKeyDown={(e) => { if (e.key === 'Enter') setSelectedImage(cert.fullImage); }}
+                                >
+                                    <img
+                                        src={cert.image}
+                                        alt={t(cert.titleKey)}
+                                        className="certificate-image" 
+                                        loading="lazy"
+                                    />
+                                </div>
+                            )}
+                            <div className="certificate-info">
+                                <h3 className="certificate-card-title">{t(cert.titleKey)}</h3>
+                                <p className="certificate-issuer">{t(cert.issuerKey)}</p>
+                                <p className="certificate-date">{t(cert.dateKey)}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
-            <div className="certificates-grid">
-                {certificates.map((cert, index) => (
-                    <div className="certificate-card fade-up" key={cert.id} style={{ animationDelay: `${0.2 + index * 0.05}s` }}>
-                        {cert.image && (
-                            <a
-                                href={cert.fullImage} 
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="certificate-image-link-wrapper" 
-                            >
-                                <img
-                                    src={cert.image}
-                                    alt={t(cert.titleKey)}
-                                    className="certificate-image" 
-                                    loading="lazy"
-                                />
-                            </a>
-                        )}
-                        <div className="certificate-info">
-                            <h3 className="certificate-card-title">{t(cert.titleKey)}</h3>
-                            <p className="certificate-issuer">{t(cert.issuerKey)}</p>
-                            <p className="certificate-date">{t(cert.dateKey)}</p>
-                        </div>
+            {selectedImage && (
+                <div className="lightbox-overlay" onClick={() => setSelectedImage(null)}>
+                    <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="lightbox-close" onClick={() => setSelectedImage(null)}>×</button>
+                        <img src={selectedImage} alt="Certificate Full View" className="lightbox-img" />
                     </div>
-                ))}
-            </div>
-        </div>
+                </div>
+            )}
+        </>
     );
 };
 

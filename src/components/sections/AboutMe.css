@@ -162,6 +162,52 @@
   margin-top: 1rem;
 }
 
+/* ── CTA Buttons ── */
+.hero-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all var(--transition);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.cta-btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+}
+
+.cta-btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.45);
+}
+
+.cta-btn-secondary {
+  background: transparent;
+  color: var(--text-base);
+  border: 1px solid var(--border);
+}
+
+.cta-btn-secondary:hover {
+  border-color: var(--primary-light);
+  color: var(--primary-light);
+  transform: translateY(-3px);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .hero-top-block {

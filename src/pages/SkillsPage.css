@@ -69,40 +69,54 @@
   gap: 0.5rem;
 }
 
-.skills-list {
-  list-style: none;
-  padding: 0;
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
 }
 
-.skills-list li {
+.skill-card {
   background: var(--bg-subtle);
-  border: 1px solid transparent;
-  border-radius: var(--radius-sm);
-  padding: 0.8rem 1rem;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  color: var(--primary-light);
+  background: rgba(139, 92, 246, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.skill-name {
   font-size: 0.95rem;
   color: var(--text-base);
   font-weight: 600;
-  transition: all var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  line-height: 1.4;
 }
 
-/* Custom bullet logic */
-.skills-list li::before {
-  content: '⚡';
-  font-size: 0.85rem;
-}
-
-.skills-list li:hover {
+.skill-card:hover {
   background: var(--bg-card);
-  border-color: var(--primary-light);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99,102,241,.1);
-  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1);
 }
 
 /* ── Responsive ── */

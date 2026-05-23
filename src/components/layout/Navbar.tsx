@@ -69,13 +69,17 @@ const Navbar = () => {
           >
             {t('navbar.certificates')}
           </Link>
-          <Link
-            to="/contact"
-            className={`contact${isActive('/contact') ? ' active' : ''}`}
-            onClick={() => setIsOpen(false)}
+          <a
+            href="#contact"
+            className="contact"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(false);
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             {t('navbar.contact')}
-          </Link>
+          </a>
         </nav>
       </header>
     </div>

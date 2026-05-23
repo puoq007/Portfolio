@@ -1,6 +1,7 @@
 
 import './JigImsCaseStudy.css';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { FaDatabase, FaServer, FaCode, FaMicrochip, FaTools, FaCheckCircle } from 'react-icons/fa';
 
 const JigImsCaseStudy = () => {
@@ -79,7 +80,7 @@ const JigImsCaseStudy = () => {
       </section>
       
       <div className="case-study-footer fade-up" style={{ animationDelay: '0.8s' }}>
-        <a href="#/mywork_page" className="back-btn">{t('case_study.back_to_projects')}</a>
+        <Link to="/mywork_page" className="back-btn">{t('case_study.back_to_projects')}</Link>
       </div>
     </div>
   );

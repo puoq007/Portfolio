@@ -88,6 +88,11 @@
   color: var(--text-muted);
   line-height: 1.5;
   margin-bottom: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .exact-card-btn {

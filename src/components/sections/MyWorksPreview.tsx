@@ -31,8 +31,8 @@ const MyWorksPreview = () => {
   return (
     <section className="featured-projects-editorial">
       <div className="editorial-header fade-up">
-        <h2 className="section-heading">Featured <br /> <span className="highlight-text">Projects</span></h2>
-        <p className="section-subtext">Selected works that showcase my ability to build end-to-end solutions.</p>
+        <h2 className="section-heading">{t('homepage.featured_title_line1')} <br /> <span className="highlight-text">{t('homepage.featured_title_line2')}</span></h2>
+        <p className="section-subtext">{t('homepage.featured_projects_subtitle')}</p>
       </div>
 
       <div className="projects-container">
@@ -65,7 +65,7 @@ const MyWorksPreview = () => {
 
       <div className="view-all-container fade-up" style={{ animationDelay: '0.4s' }}>
         <Link to="/mywork_page" className="view-all-btn">
-          View All Projects
+          {t('homepage.view_all_projects')}
         </Link>
       </div>
     </section>

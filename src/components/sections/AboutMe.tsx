@@ -1,6 +1,9 @@
 import './AboutMe.css';
 import { useTranslation } from 'react-i18next';
+import { FaDownload } from 'react-icons/fa';
 import avatarImg from '../../assets/img/profile.png';
+import cvPdf from '../../assets/Documents/CV_Kanjanaroj.pdf';
+import resumePdf from '../../assets/Documents/RESUME_Kanjanaroj.pdf';
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -46,6 +49,14 @@ const AboutMe = () => {
           <p className="main-description">
             {t('about_me.description')}
           </p>
+          <div className="hero-cta-buttons">
+            <a href={cvPdf} download="CV_Kanjanaroj.pdf" className="cta-btn cta-btn-primary">
+              <FaDownload /> {t('about_me.download_cv_button')}
+            </a>
+            <a href={resumePdf} download="RESUME_Kanjanaroj.pdf" className="cta-btn cta-btn-secondary">
+              <FaDownload /> {t('about_me.download_resume_button')}
+            </a>
+          </div>
         </div>
 
       </section>
