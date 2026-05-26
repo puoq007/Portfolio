@@ -56,6 +56,7 @@ html, body, #root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* ── Global Purple Glows ── */
