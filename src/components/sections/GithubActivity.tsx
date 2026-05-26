@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from 'react';
 import './GithubActivity.css';
 import { useTranslation } from 'react-i18next';
 
@@ -7,10 +7,36 @@ const GithubActivity = () => {
   const username = 'puoq007';
   const githubUrl = `https://github.com/${username}`;
 
+  const [repoCount, setRepoCount] = useState<number | string>('...');
+  const [langCount, setLangCount] = useState<number | string>('...');
+  const [starCount, setStarCount] = useState<number | string>('...');
+
+  useEffect(() => {
+    const fetchGithubStats = async () => {
+      try {
+        const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+        if (!response.ok) return;
+        const repos = await response.json();
+        
+        setRepoCount(repos.length);
+        
+        const languages = new Set(repos.map((r: any) => r.language).filter(Boolean));
+        setLangCount(languages.size);
+
+        const stars = repos.reduce((acc: number, r: any) => acc + r.stargazers_count, 0);
+        setStarCount(stars);
+      } catch (error) {
+        console.error('Failed to fetch github stats', error);
+      }
+    };
+
+    fetchGithubStats();
+  }, []);
+
   const stats = [
-    { label: t('github_activity.repositories'), value: '20+', icon: '📁' },
-    { label: t('github_activity.languages'), value: '10+', icon: '💻' },
-    { label: t('github_activity.projects'), value: '11', icon: '🚀' },
+    { label: t('github_activity.repositories', 'Repositories'), value: repoCount, icon: '📁' },
+    { label: t('github_activity.languages', 'Languages'), value: langCount, icon: '💻' },
+    { label: t('github_activity.stars', 'Stars'), value: starCount, icon: '⭐' },
   ];
 
   return (
