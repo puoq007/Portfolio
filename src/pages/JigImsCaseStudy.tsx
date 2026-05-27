@@ -32,13 +32,13 @@ const JigImsCaseStudy = () => {
           <div className="arch-box">
             <FaCode className="arch-icon" />
             <h3>{t('jig_ims_case_study.frontend')}</h3>
-            <p>Blazor WebAssembly (ASP.NET Core)</p>
+            <p>ASP.NET Web Pages</p>
           </div>
           <div className="arch-arrow">➜</div>
           <div className="arch-box">
             <FaServer className="arch-icon" />
             <h3>{t('jig_ims_case_study.backend_api')}</h3>
-            <p>.NET Web API (C#)</p>
+            <p>ASP.NET (Framework)</p>
           </div>
           <div className="arch-arrow">➜</div>
           <div className="arch-box">
