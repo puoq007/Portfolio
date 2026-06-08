@@ -77,7 +77,7 @@
 
 .skill-card {
   background: var(--bg-subtle);
-  border: 1px solid rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(26, 26, 46, 0.08);
   border-radius: var(--radius-md);
   padding: 1.25rem;
   display: flex;
@@ -89,8 +89,8 @@
 
 .skill-icon {
   font-size: 1.5rem;
-  color: var(--primary-light);
-  background: rgba(139, 92, 246, 0.1);
+  color: var(--primary);
+  background: rgba(59, 79, 216, 0.08);
   width: 40px;
   height: 40px;
   border-radius: 8px;
@@ -112,7 +112,7 @@
   background: var(--bg-card);
   border-color: var(--primary);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(59, 79, 216, 0.1);
 }
 
 .skill-card:hover .skill-icon {

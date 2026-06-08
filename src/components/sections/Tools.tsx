@@ -33,7 +33,7 @@ function Tools() {
     { icon: SiSharp, name: 'C#', size: 'medium', color: '#239120' },
     { icon: SiDotnet, name: '.NET', size: 'medium', color: '#512BD4' },
     
-    { icon: FaGithub, name: 'GitHub', size: 'small', color: '#f8fafc' },
+    { icon: FaGithub, name: 'GitHub', size: 'small', color: '#1a1a2e' },
     { icon: FaDocker, name: 'Docker', size: 'small', color: '#2496ED' },
     { icon: FaDatabase, name: 'SQL Server', size: 'small', color: '#CC2927' },
     { icon: SiMongodb, name: 'MongoDB', size: 'small', color: '#47A248' },

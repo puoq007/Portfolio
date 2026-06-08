@@ -1,12 +1,12 @@
 /* ════════════════════════════════════════════
-   MINIMAL FOOTER
+   CONTACT / FOOTER — Light editorial
    ════════════════════════════════════════════ */
 
 .minimal-footer {
   max-width: 1000px;
   margin: 6rem auto 2rem;
   padding: 0 1.5rem;
-  border-top: 1px solid rgba(139, 92, 246, 0.1);
+  border-top: 1px solid rgba(26, 26, 46, 0.1);
   padding-top: 4rem;
   position: relative;
   z-index: 10;
@@ -36,30 +36,34 @@
 
 .footer-title {
   font-size: 1.2rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text-base);
   margin-bottom: 1rem;
+  font-family: 'Prompt', sans-serif;
 }
 
 .footer-description {
   font-size: 0.9rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 2rem;
 }
 
 .footer-email {
   display: inline-block;
   font-size: 1rem;
-  color: #fff;
+  color: var(--text-base);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 2rem;
   transition: color 0.3s;
+  border-bottom: 1.5px solid rgba(26, 26, 46, 0.2);
+  padding-bottom: 2px;
 }
 
 .footer-email:hover {
-  color: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .footer-socials {
@@ -75,7 +79,7 @@
 }
 
 .footer-socials a:hover {
-  color: var(--primary-light);
+  color: var(--primary);
   transform: translateY(-3px);
 }
 
@@ -89,10 +93,10 @@
 /* ── Code Card UI ── */
 .footer-code-card {
   flex: 1;
-  background-color: #0d0617;
-  border-radius: 12px;
-  border: 1px solid rgba(139, 92, 246, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background-color: #1e1e2e;
+  border-radius: 14px;
+  border: 1px solid rgba(26, 26, 46, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 500px;
   width: 100%;
@@ -102,8 +106,8 @@
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  background-color: #1a0b2e;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+  background-color: #16162a;
+  border-bottom: 1px solid rgba(255,255,255,.06);
   gap: 8px;
 }
 
@@ -121,23 +125,23 @@
 .code-title {
   margin-left: auto;
   margin-right: auto;
-  color: var(--text-muted);
-  font-size: 0.85rem;
+  color: rgba(255,255,255,.3);
+  font-size: 0.82rem;
   font-family: monospace;
 }
 
 .code-body {
   padding: 20px;
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #f8fafc;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #e2e8f0;
   overflow-x: auto;
 }
 
 /* Syntax Highlighting */
 .syntax-bracket { color: #a78bfa; }
 .syntax-key { color: #7dd3fc; }
-.syntax-string { color: #a3e635; }
-.syntax-colon { color: #94a3b8; }
-.syntax-comma { color: #94a3b8; }
+.syntax-string { color: #86efac; }
+.syntax-colon { color: #64748b; }
+.syntax-comma { color: #64748b; }

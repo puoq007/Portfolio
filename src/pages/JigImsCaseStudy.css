@@ -14,9 +14,8 @@
   font-weight: 900;
   margin: 1rem 0 1.5rem;
   letter-spacing: -2px;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-base);
+  font-family: 'Prompt', sans-serif;
 }
 
 .case-study-intro {
@@ -29,11 +28,11 @@
 
 .case-study-section {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(26, 26, 46, 0.08);
   border-radius: var(--radius-lg);
   padding: 3rem;
   margin-bottom: 3rem;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .section-title {
